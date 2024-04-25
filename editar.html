@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML + JS + LocalStorage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <p style="background-color: pink">Tela de Edição</p>
+        <p>Selecione a opção que deseja:</p>
+        <a class="decoration-none" href="./inicio.html">
+            <button>Página Inicial</button>
+        </a>
+        <a class="decoration-none" href="./cadastro.html">
+            <button>Cadastro</button>
+        </a> 
+        <a class="decoration-none" href="./consulta.html">
+            <button>Consulta</button>
+        </a> 
+    </header>
+    <main>
+        <form onsubmit="event.preventDefault()">
+            <input type="text" minlength="1" placeholder="ID" id="ID">
+            <button onclick="buscarDados()">Buscar Usuario</button>
+            <input type="text" required maxlength="150" minlength="3" placeholder="Nome completo" id="nomeCompleto">
+            <input type="date" required placeholder="Data nascimento" id="dataNascimento">
+            <input type="text" required placeholder="CPF" id="CPF">
+            <input type="text" placeholder="CNPJ" id="CNPJ">
+            <input type="email" required placeholder="Email" id="email">
+            <select id ="genero">
+                <option>Selecione</option>
+                <option value="feminino">Feminino</option>
+                <option value="masculino">Masculino</option>
+                <option value="naoInformado">Prefiro não dizer</option>
+                <option value="outro">Outro</option>
+            </select>
+            <input type="text" placeholder="Foto" id="foto">
+            <button type="submit" onclick="editar()">Salvar Alterações</button>
+        </form>
+    </main>
+    <footer>
+        <a href="https://github.com/GabrielyAndrade1">GitHub.com/GabrielyAndrade</a>
+    </footer>
+    <script src="./editar.js"></script>
+</body>
+</html>
